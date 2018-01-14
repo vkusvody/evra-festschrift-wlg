@@ -1,0 +1,167 @@
+% for URLs
+\usepackage{url}
+
+% AMS packages
+%\usepackage{amsfonts}
+\usepackage{amssymb,amsmath,amsthm,stmaryrd}
+\usepackage[mathscr]{eucal}
+\usepackage[normalem]{ulem}
+
+\usepackage{microtype} % better management of overfulls
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{csquotes}
+% less bulky sideways env for vertical text
+\newcommand{\vtt}[1]{\begin{sideways}\large #1\end{sideways}}
+\usepackage{enumerate}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\renewcommand{\theenumiii}{\arabic{enumiii}}
+\renewcommand{\labelenumii}{\theenumi.\theenumii}
+\renewcommand{\labelenumiii}{\theenumi.\theenumii.\theenumiii}
+\usepackage{mathrsfs}
+% Allow equations to break over pages...
+%\interdisplaylinepenalty=2500
+% Command to stop equation breaks
+% Note: enclose this in braces when used...
+%\newcommand{\donotsplitoverpages}{\interdisplaylinepenalty=10000}
+
+% Graphics %@think about putting dvips as the fallback
+\ifx\luatexversion\undefined
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[luatex]{graphicx}
+\fi
+
+
+%% fonts omg, designed for use with xe/lua
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+%\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{EB Garamond}
+%\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{Charis SIL}
+\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+%\newfontfamily\charis{Charis SIL}
+%\DeclareTextFontCommand{\textpa}{\charis}
+\newfontfamily\libertine{Linux Libertine O}
+
+% For better margin notes
+\usepackage{marginnote}
+\usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage[noadjust]{cite}
+%\usepackage[tableposition=top]{caption}
+
+% For cool tables
+\usepackage{array}
+
+% For subfigures
+\usepackage{subfig}
+%\usepackage{subfigure}
+
+% For algorithms
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+
+% For cases
+\usepackage{sublabel}
+
+% (Re)Set the figure path
+\newcommand{\setfigurepath}[1]{%
+\ifx\figurepath\undefined
+	\newcommand{\figurepath}{#1}
+\else
+	\renewcommand{\figurepath}{#1}
+\fi%
+}
+
+% Used in the continued list environment below
+\newcounter{continuedlist}
+
+% Continued list environment
+\newenvironment{continuedlist}{%
+	\begin{enumerate}%
+		% Space out each item
+		\setlength{\itemsep}{1.25em}%
+		% Start the enumeration from the previous value
+		\setcounter{enumi}{\value{continuedlist}} 
+}{%
+		% Save the counter to continue it later
+		\setcounter{continuedlist}{\value{enumi}}%
+	\end{enumerate}%
+	%\vspace{1.25em}%
+	\vspace{1em}%
+}
+
+% Spaced out list environment
+\newenvironment{spacedoutlist}{%
+	\begin{itemize}%
+		% Space out each item
+		\setlength{\itemsep}{1.25em}%
+}{%
+	\end{itemize}%
+}
+
+%% this is my addition -- ik
+%%% one option to fix counters -- i don't want many resets
+%\usepackage{chngcntr}
+%\counterwithout{footnote}{chapter}
+%\counterwithout{ExNo}{chapter}
+%% allow for multiple footnotes at one point
+\usepackage{fnpct}
+%% no widows!
+%%\usepackage[all]{nowidow}
+%% easy (or fancy?..) ordinals
+\usepackage{fmtcount}
+%%%the bibliography
+\usepackage[backend=biber,
+ babel=other,
+ bibstyle=authoryear,%biblatex-sp-unified,
+ citestyle=authoryear-ibid,%sp-authoryear-comp,
+ maxcitenames=3,
+ maxbibnames=99]{biblatex}
+\setlength{\bibitemsep}{0pt}
+\addbibresource{ikref.bib}%home/vania/Dropbox/Public/ikref.bib}%fest/sborka/fest_merged.bib}
+\DeclareRobustCommand\dash{%
+  \unskip\nobreak\thinspace\textemdash\thinspace\ignorespaces}
+%%%linguistics: examples & trees
+\usepackage{tipa}
+\let\ipa\textipa
+%\usepackage[hyper]{philex}
+%\let\eachwordone\charis
+\usepackage{expex}
+\gathertags
+\lingset{aboveglftskip=0px,everygla=\libertine}
+\let\gtrf\getref
+\newcommand\rex[1]{(\getref{#1})}
+\newcommand\gfr[1]{(\getfullref{#1})}
+\usepackage{epltxfn}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{tikz-qtree}
+%\usepackage{qtree}
+\usepackage[linguistics]{forest}
+%@ob's avm 
+% \usepackage{avm}
+% \avmfont{\sc\footnotesize}
+% \avmoptions{sorted,active}
+% \avmvalfont{\rm\footnotesize}
+% \avmsortfont{\rm\footnotesize}
+% \usepackage{rotating}
+%% enf of ob avm
+%% footnotes out of tables; must load after `rotating`
+\usepackage{ctable}
+%\setupctable{botcap}
+\usepackage{tablefootnote}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[nomain]{glossaries}
+\usepackage{glossary-inline}
+\usepackage[glosses]{leipzig}
+\input{newleipzigs}
+\makeglossaries
+\glsdisablehyper
+
+%% various macro, esp. non-leipzig glossing
+\input{isocodes}
+\input{wlggloss}
