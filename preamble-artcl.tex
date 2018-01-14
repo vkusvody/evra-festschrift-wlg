@@ -37,10 +37,13 @@
 
 %% fonts omg, designed for use with xe/lua
 \usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{russian}
 \defaultfontfeatures{Ligatures=TeX}
 %\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{EB Garamond}
 %\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{Charis SIL}
 \setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{Linux Libertine O}
+\newfontfamily\cyrillicfont{Linux Libertine O}
 \setsansfont{Linux Biolinum O}
 %\newfontfamily\charis{Charis SIL}
 %\DeclareTextFontCommand{\textpa}{\charis}
@@ -115,7 +118,7 @@
 \usepackage{fmtcount}
 %%%the bibliography
 \usepackage[backend=biber,
- babel=other,
+ %babel=other,%they tell me it's deprecated?
  bibstyle=authoryear,%biblatex-sp-unified,
  citestyle=authoryear-ibid,%sp-authoryear-comp,
  maxcitenames=3,
