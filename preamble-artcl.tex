@@ -39,15 +39,14 @@
 \usepackage{fontspec}
 \usepackage{polyglossia}
 \setmainlanguage{russian}
-\defaultfontfeatures{Ligatures=TeX}
-%\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{EB Garamond}
-%\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{Charis SIL}
-\setmainfont[Ligatures=TeX,Numbers={OldStyle,Proportional}]{Linux Libertine O}
-\newfontfamily\cyrillicfont{Linux Libertine O}
+\defaultfontfeatures{Ligatures=TeX,Numbers={OldStyle,Proportional}}
+\setmainfont{Linux Libertine O}
+\newfontfamily\cyrillicfont{Gentium Plus}
 \setsansfont{Linux Biolinum O}
 %\newfontfamily\charis{Charis SIL}
 %\DeclareTextFontCommand{\textpa}{\charis}
 \newfontfamily\libertine{Linux Libertine O}
+\newfontfamily\gentium{Gentium Plus}
 
 % For better margin notes
 \usepackage{marginnote}
@@ -134,7 +133,7 @@
 %\let\eachwordone\charis
 \usepackage{expex}
 \gathertags
-\lingset{aboveglftskip=0px,everygla=\libertine}
+\lingset{aboveglftskip=0px,everygla=\gentium}
 \let\gtrf\getref
 \newcommand\rex[1]{(\getref{#1})}
 \newcommand\gfr[1]{(\getfullref{#1})}
