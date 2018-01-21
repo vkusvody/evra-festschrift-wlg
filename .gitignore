@@ -15,8 +15,8 @@
 *.cb2
 
 ## Lualatex? auxiliary files:
-*.lzo
-*.lzs
+#*.lzo
+#*.lzs
 
 ## Intermediate documents:
 *.dvi
@@ -100,7 +100,7 @@ acs-*.bib
 # glossaries
 *.acn
 *.acr
-*.glg
+#*.glg
 *.glo
 *.gls
 *.glsdefs
