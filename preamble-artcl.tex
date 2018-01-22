@@ -40,13 +40,13 @@
 \usepackage{polyglossia}
 \setmainlanguage{russian}
 \defaultfontfeatures{Ligatures=TeX,Numbers={OldStyle,Proportional}}
-\setmainfont{Linux Libertine O}
-\newfontfamily\cyrillicfont{Libertinus Serif}
+\setmainfont{Gentium Plus}
+\newfontfamily\cyrillicfont{Gentium Plus}
 \setsansfont{Linux Biolinum O}
 %\newfontfamily\charis{Charis SIL}
 %\DeclareTextFontCommand{\textpa}{\charis}
 %\newfontfamily\libertine{Linux Libertine O}
-\newfontfamily\liber{Libertinus Serif}
+\newfontfamily\gentium{Gentium Plus}
 
 % For better margin notes
 \usepackage{marginnote}
@@ -119,7 +119,7 @@
 \usepackage[backend=biber,
  %babel=other,%they tell me it's deprecated?
  bibstyle=authoryear,%biblatex-sp-unified,
- citestyle=authoryear-ibid,%sp-authoryear-comp,
+ citestyle=authoryear,%sp-authoryear-comp,
  maxcitenames=3,
  maxbibnames=99]{biblatex}
 \setlength{\bibitemsep}{0pt}
@@ -133,7 +133,7 @@
 %\let\eachwordone\charis
 \usepackage{expex}
 \gathertags
-\lingset{aboveglftskip=0px,everygla=\liber}
+\lingset{aboveglftskip=0px,everygla=\gentium}
 \let\gtrf\getref
 \newcommand\rex[1]{(\getref{#1})}
 \newcommand\gfr[1]{(\getfullref{#1})}
