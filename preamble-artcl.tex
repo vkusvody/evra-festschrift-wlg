@@ -3,8 +3,9 @@
 
 % AMS packages
 %\usepackage{amsfonts}
-\usepackage{amssymb,amsmath,amsthm,stmaryrd}
-\usepackage[mathscr]{eucal}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{marvosym}
+%\usepackage[mathscr]{eucal}
 \usepackage[normalem]{ulem}
 
 \usepackage{microtype} % better management of overfulls
@@ -45,8 +46,8 @@
 \setsansfont{Linux Biolinum O}
 %\newfontfamily\charis{Charis SIL}
 %\DeclareTextFontCommand{\textpa}{\charis}
-%\newfontfamily\libertine{Linux Libertine O}
-\newfontfamily\gentium{Gentium Plus}
+\newfontfamily\libertine{Linux Libertine O}
+%\newfontfamily\gentium{Gentium Plus}
 
 % For better margin notes
 \usepackage{marginnote}
@@ -119,7 +120,7 @@
 \usepackage[backend=biber,
  %babel=other,%they tell me it's deprecated?
  bibstyle=authoryear,%biblatex-sp-unified,
- citestyle=authoryear,%sp-authoryear-comp,
+ citestyle=verbose,%sp-authoryear-comp,
  maxcitenames=3,
  maxbibnames=99]{biblatex}
 \setlength{\bibitemsep}{0pt}
@@ -133,7 +134,7 @@
 %\let\eachwordone\charis
 \usepackage{expex}
 \gathertags
-\lingset{aboveglftskip=0px,everygla=\gentium}
+\lingset{aboveglftskip=0px,everygla=\libertine}
 \let\gtrf\getref
 \newcommand\rex[1]{(\getref{#1})}
 \newcommand\gfr[1]{(\getfullref{#1})}
