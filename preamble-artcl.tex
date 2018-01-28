@@ -119,12 +119,15 @@
 %%%the bibliography
 \usepackage[backend=biber,
  %babel=other,%they tell me it's deprecated?
- bibstyle=authoryear,%biblatex-sp-unified,
- citestyle=verbose,%sp-authoryear-comp,
+ bibstyle=gost-footnote,%authoryear,%biblatex-sp-unified,
+ citestyle=gost-footnote,%verbose,%sp-authoryear-comp,
+ inbookibid=false,
  maxcitenames=3,
  maxbibnames=99]{biblatex}
 \setlength{\bibitemsep}{0pt}
 \addbibresource{ikref.bib}%home/vania/Dropbox/Public/ikref.bib}%fest/sborka/fest_merged.bib}
+\renewcommand*{\addcolondelim}{\addcolon\space}
+\renewcommand*{\addsemicolondelim}{\addsemicolon\space}
 \DeclareRobustCommand\dash{%
   \unskip\nobreak\thinspace\textemdash\thinspace\ignorespaces}
 %%%linguistics: examples & trees
